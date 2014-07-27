@@ -113,7 +113,7 @@ void EmuMediaImpl::setSurfaceRegion(JNIEnv *env,
 	screenWidth = w;
 	screenHeight = h;
 
-	env->CallStaticIntMethod(jPeerClass, midSetSurfaceRegion, x, y, w, h);
+	env->CallStaticVoidMethod(jPeerClass, midSetSurfaceRegion, x, y, w, h);
 
 	screen = new unsigned short[w * h];
 	jVideoBuffer = env->NewIntArray(w * h);
