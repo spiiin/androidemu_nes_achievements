@@ -44,6 +44,9 @@
 #include "driver.h"
 #include "svga.h"
 
+#include "gpg.h"
+#include "game_checker.h"
+
 extern SFORMAT FCEUVSUNI_STATEINFO[];
 
 static uint8 *trainerpoo=0;
@@ -463,8 +466,9 @@ typedef struct {
 
 int iNESLoad(const char *name, int fp)
 {
-        struct md5_context md5;
+  struct md5_context md5;
 
+  gpg_init();
 	if(FCEU_fread(&head,1,16,fp)!=16)
  	 return 0;
 
@@ -573,6 +577,7 @@ int iNESLoad(const char *name, int fp)
         if(head.ROM_type&2) FCEU_printf(" Battery-backed.\n");
         if(head.ROM_type&4) FCEU_printf(" Trained.\n");
 
+  CheckGame(iNESGameCRC32);
 	SetInput();
 	CheckHInfo();
 	{

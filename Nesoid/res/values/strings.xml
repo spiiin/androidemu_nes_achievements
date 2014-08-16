@@ -34,6 +34,9 @@
 	<!-- Menu -->
 	<string name="settings">Settings</string>
 	<string name="reset">Reset</string>
+  <string name="gpg_login">Google Play Login</string>
+  <string name="gpg_logout">Google Play Logout</string>
+  <string name="gpg_achievements">Achievements</string>
 	<string name="power">Power</string>
 	<string name="change_disk">Change disk</string>
 	<string name="disk_side">Disk %1$d Side %2$c</string>

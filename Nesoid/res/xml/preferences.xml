@@ -9,7 +9,7 @@
 					android:title="@string/enable_sound"
 					android:defaultValue="true"/>
 
-			<com.androidemu.nes.SeekBarPreference
+			<com.androidemu.nesachiev.SeekBarPreference
 					android:key="soundVolume"
 					android:dependency="soundEnabled"
 					android:title="@string/sound_volume"
@@ -47,7 +47,7 @@
 					android:entryValues="@array/frame_skip_entryvalues"
 					android:defaultValue="auto"/>
 
-			<com.androidemu.nes.SeekBarPreference
+			<com.androidemu.nesachiev.SeekBarPreference
 					android:key="maxFrameSkips"
 					android:title="@string/max_frame_skips"
 					android:summary="@string/max_frame_skips_summary"
@@ -109,7 +109,7 @@
 			<CheckBoxPreference android:key="dpad4Way"
 					android:title="@string/dpad_4way"/>
 
-			<com.androidemu.nes.SeekBarPreference
+			<com.androidemu.nesachiev.SeekBarPreference
 					android:key="dpadDeadZone"
 					android:title="@string/dpad_deadzone"
 					androidemu:maxValue="4"
@@ -124,7 +124,7 @@
 						android:title="@string/point_size_press"
 						android:summary="@string/point_size_press_summary"/>
 
-				<com.androidemu.nes.SeekBarPreference
+				<com.androidemu.nesachiev.SeekBarPreference
 						android:key="pointSizePressThreshold"
 						android:title="@string/point_size_press_threshold"
 						android:dependency="pointSizePress"
@@ -139,7 +139,7 @@
 						android:entryValues="@array/vkeypad_size_entryvalues"
 						android:defaultValue="medium"/>
 
-				<com.androidemu.nes.SeekBarPreference
+				<com.androidemu.nesachiev.SeekBarPreference
 						android:key="vkeypadTransparency"
 						android:title="@string/vkeypad_transparency"
 						android:defaultValue="50"/>
@@ -166,7 +166,7 @@
 					android:entryValues="@array/vkeypad_layout_entryvalues"
 					android:defaultValue="top_bottom"/>
 
-			<com.androidemu.nes.SeekBarPreference
+			<com.androidemu.nesachiev.SeekBarPreference
 					android:key="layoutMargin"
 					android:title="@string/layout_margin"
 					androidemu:maxValue="5"
@@ -177,7 +177,7 @@
 				android:title="@string/enable_trackball"
 				android:defaultValue="true"/>
 
-		<com.androidemu.nes.SeekBarPreference
+		<com.androidemu.nesachiev.SeekBarPreference
 				android:key="trackballSensitivity"
 				android:title="@string/trackball_sensitivity"
 				android:dependency="enableTrackball"
@@ -187,7 +187,7 @@
 		<CheckBoxPreference android:key="enableSensor"
 				android:title="@string/enable_sensor"/>
 
-		<com.androidemu.nes.SeekBarPreference
+		<com.androidemu.nesachiev.SeekBarPreference
 				android:key="sensorSensitivity"
 				android:dependency="enableSensor"
 				android:title="@string/sensor_sensitivity"
@@ -196,7 +196,7 @@
 	</PreferenceScreen>
 
 	<PreferenceScreen android:title="@string/netplay_settings">
-		<com.androidemu.nes.SeekBarPreference
+		<com.androidemu.nesachiev.SeekBarPreference
 				android:key="maxFramesAhead"
 				android:title="@string/max_frames_ahead"
 				android:summary="@string/max_frames_ahead_summary"
@@ -254,16 +254,16 @@
 					android:summary="@string/use_input_method_summary"/>
 
 			<PreferenceScreen android:title="@string/shortcut_keys">
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.nesachiev.KeyPreference
 						android:key="quickLoad"
 						android:title="@string/quick_load"/>
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.nesachiev.KeyPreference
 						android:key="quickSave"
 						android:title="@string/quick_save"/>
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.nesachiev.KeyPreference
 						android:key="fastForward"
 						android:title="@string/fast_forward"/>
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.nesachiev.KeyPreference
 						android:key="screenshot"
 						android:title="@string/screenshot"/>
 			</PreferenceScreen>
@@ -273,10 +273,6 @@
 	<PreferenceScreen android:title="@string/app_about">
 		<PreferenceScreen android:key="about"
 				android:title="@string/about"/>
-		<PreferenceScreen android:key="upgrade"
-				android:title="@string/upgrade"/>
-		<PreferenceScreen android:key="searchRoms"
-				android:title="@string/search_roms"/>
 	</PreferenceScreen>
 
 </PreferenceScreen>

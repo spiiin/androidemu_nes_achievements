@@ -28,6 +28,8 @@
 
 #include "dprintf.h"
 
+#include "game_checker.h"
+
 #ifdef DEBUG_ASM_6502
 #include <stdio.h>
 #include <stdlib.h>
@@ -551,6 +553,7 @@ void X6502_Run_c(void/*int32 cycles*/)
 	  //printf("$%04x:$%02x\n",_PC,b1);
 	 //_PC++;
 	 //printf("$%02x\n",b1);
+   CallInjected();
 	 _PC++;
          switch(b1)
          {

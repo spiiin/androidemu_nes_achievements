@@ -38,6 +38,7 @@ LOCAL_SRC_FILES := \
 	movie.c \
 	fceu098.c \
 	ppu098.c \
+  x6502.c \
 	mappers/113.c \
 	mappers/15.c \
 	mappers/151.c \
@@ -184,7 +185,7 @@ LOCAL_SRC_FILES := \
 	zlib/unzip.c \
 	zlib/ioapi.c
 
-LOCAL_CFLAGS += -DASM_6502
+#LOCAL_CFLAGS += -DASM_6502
 LOCAL_SRC_FILES += \
 	ncpu.S \
 	giz_blit.s \
@@ -195,6 +196,11 @@ LOCAL_SRC_FILES += \
 	drivers/android/file.c \
 	drivers/android/netplay.c \
 	drivers/android/nesengine.cpp
+  
+LOCAL_SRC_FILES += \
+  gpg.cpp \
+  game_checker.cpp \
+  StateManager.cpp
 
 # All of the shared libraries we link against.
 #LOCAL_SHARED_LIBRARIES := \
@@ -209,6 +215,7 @@ LOCAL_SRC_FILES += \
 LOCAL_C_INCLUDES += \
 	$(JNI_H_INCLUDE) \
 	$(LOCAL_PATH)/../../common \
+  $(LOCAL_PATH)/../../gpg-cpp-sdk/include \
 	external/zlib
 
 LOCAL_LDLIBS := -lz -llog
@@ -222,6 +229,8 @@ LOCAL_CFLAGS += \
 	-DLSB_FIRST=1 \
 	-DFRAMESKIP=1 \
 	-DZLIB
+  
+LOCAL_STATIC_LIBRARIES := gpg-1
 
 # Don't prelink this library.  For more efficient code, you may want
 # to add this library to the prelink map and set this to true. However,
